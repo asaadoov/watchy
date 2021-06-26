@@ -10,27 +10,21 @@ use App\ViewModels\MovieViewModel;
 class MovieController extends Controller
 {
 	public function index(){
-
-		$popularMovies = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/movie/popular')
-			->json()['results'];
-
-		$nowPlayingMovies = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/movie/now_playing')
+		
+		$popularMovies = Http::get('https://api.themoviedb.org/3/movie/popular?api_key='.config('services.tmdb.token'))->json()['results'];
+		// dd($popularMovies);
+		$nowPlayingMovies = Http::get('https://api.themoviedb.org/3/movie/now_playing?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
-		$arabicMovies = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/discover/movie?language=ar&primary_release_date.gte=2010&vote_average.gte=7.9&with_original_language=ar')
+		$arabicMovies = Http::get('https://api.themoviedb.org/3/discover/movie?language=ar&primary_release_date.gte=2010&vote_average.gte=7.9&with_original_language=ar&api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
-		// $arabicMovies2 = Http::withToken(config('services.tmdb.token'))
-		// 	->get('https://api.themoviedb.org/3/discover/movie?language=ar&sort_by=primary_release_date.desc&page=2&primary_release_date.gte=2014&vote_average.gte=7.5&with_original_language=ar')
+		// $arabicMovies2 = Http:: 	->get('https://api.themoviedb.org/3/discover/movie?language=ar&sort_by=primary_release_date.desc&page=2&primary_release_date.gte=2014&vote_average.gte=7.5&with_original_language=ar')
 		// 	->json()['results'];
 	
 		// $arabicMovies= array_merge($arabicMovies1, $arabicMovies2);
 
-		$genres = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/genre/movie/list')
+		$genres = Http::get('https://api.themoviedb.org/3/genre/movie/list?api_key='.config('services.tmdb.token'))
 			->json()['genres'];
 
 
@@ -45,12 +39,10 @@ class MovieController extends Controller
 
 	public function show($id){
 
-		$movie = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/movie/'. $id .'?append_to_response=credits,videos,images')
+		$movie = Http::get('https://api.themoviedb.org/3/movie/'. $id .'?append_to_response=credits,videos,images&api_key='.config('services.tmdb.token'))
 			->json();
 		
-		$similarMovies = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/movie/'. $id .'/similar')
+		$similarMovies = Http::get('https://api.themoviedb.org/3/movie/'. $id .'/similar?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 
 

@@ -25,23 +25,21 @@ class MoviesViewModel extends ViewModel
 
     private function formatMovies($movies)
     {
-        
         return collect($movies)->map(function($movie) {
             $movieTitle = $movie['original_title'] != $movie['title'] ? ' | ' . $movie['original_title'] : '';
             $movieTitle = $movie['title'] . $movieTitle;
-            
             $movieGenres = collect($movie['genre_ids'])
                 ->mapWithKeys(function( $genre ) {
                     return [$genre => $this->genres()->get($genre)];
                 })
                 ->implode(', ');
-
+            // $release_date = dd();
             return collect($movie)->merge([
                 'poster_path' => $movie['poster_path'] 
                     ? 'https://image.tmdb.org/t/p/w185'.$movie['poster_path']
                     : 'https://via.placeholder.com/185x278',
                 'vote_average' => $movie['vote_average'] * 10 .'%',
-                'release_date' => Carbon::parse($movie['release_date'])->format('M d, Y'),
+                // 'release_date' => Carbon::parse($movie['release_date'])->format('M d, Y'),
                 'genres' => $movieGenres,
                 'title' => $movieTitle,
                 'original_language' => isset($movie['original_language']) ? $movie['original_language'] : '' 
