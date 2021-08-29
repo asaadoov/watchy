@@ -11,20 +11,18 @@ class TvShowController extends Controller
 {
     public function index()
     {
-        $popularTv = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/tv/popular')
+		// $arabicMovies = Http::get('https://api.themoviedb.org/3/discover/movie?language=ar&primary_release_date.gte=2010&vote_average.gte=7.9&with_original_language=ar&api_key='.config('services.tmdb.token'))
+		// 	->json()['results'];
+        $popularTv = Http::get('https://api.themoviedb.org/3/tv/popular?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 
-		$topRatedTv = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/tv/top_rated')
+		$topRatedTv = Http::get('https://api.themoviedb.org/3/tv/top_rated?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
-		$arabicTv = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/discover/tv?language=ar&sort_by=primary_release_date.desc&page=1&primary_release_date.gte=2014&vote_average.gte=5.0&with_original_language=ar')
+		$arabicTv = Http::get('https://api.themoviedb.org/3/discover/tv?language=ar&sort_by=primary_release_date.desc&page=1&primary_release_date.gte=2014&vote_average.gte=5.0&with_original_language=ar&api_key='.config('services.tmdb.token'))
 			->json()['results'];
 
-		$genres = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/genre/tv/list')
+		$genres = Http::get('https://api.themoviedb.org/3/genre/tv/list?api_key='.config('services.tmdb.token'))
 			->json()['genres'];
 
 
@@ -37,8 +35,7 @@ class TvShowController extends Controller
     
     public function show($id)
     {
-        $tvShow = Http::withToken(config('services.tmdb.token'))
-			->get('https://api.themoviedb.org/3/tv/'. $id .'?append_to_response=credits,videos,images')
+        $tvShow = Http::get('https://api.themoviedb.org/3/tv/'. $id .'?append_to_response=credits,videos,images&api_key='.config('services.tmdb.token'))
 			->json();
 
 		$viewModel= new TvShowViewModel($tvShow);
