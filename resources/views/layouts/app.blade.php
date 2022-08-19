@@ -39,7 +39,7 @@
 
 	@yield('content')
 	<footer>
-		<div style="text-align:center;">developed by Asaad Balla  &hearts; </div>
+		<div style="text-align:center; margin: 2rem;">developed by Asaad Balla  &hearts; </div>
 	</footer>
 	<livewire:scripts>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
