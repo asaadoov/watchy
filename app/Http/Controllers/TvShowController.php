@@ -19,7 +19,7 @@ class TvShowController extends Controller
 		$topRatedTv = Http::get('https://api.themoviedb.org/3/tv/top_rated?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
-		$arabicTv = Http::get('https://api.themoviedb.org/3/discover/tv?language=ar&sort_by=primary_release_date.desc&page=1&primary_release_date.gte=2014&vote_average.gte=5.0&with_original_language=ar&api_key='.config('services.tmdb.token'))
+		$arabicTv = Http::get('https://api.themoviedb.org/3/discover/tv?language=ar&sort_by=primary_release_date.desc&page=1&primary_release_date.gte=2000&with_original_language=ar&api_key='.config('services.tmdb.token'))
 			->json()['results'];
 
 		$genres = Http::get('https://api.themoviedb.org/3/genre/tv/list?api_key='.config('services.tmdb.token'))
