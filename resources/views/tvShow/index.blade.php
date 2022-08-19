@@ -4,7 +4,7 @@
 	<div class="container mx-auto px-4 pt-16">	
 		
 		<!-- Popular -->
-		<div class="popular-tvshow py-24 mx-2 md:mx-0">
+		<div class="popular-tvshow mx-2 md:mx-0">
 			<h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold"> popular tv-shows </h2>
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 ">
 				@foreach($popularTv as $tvShow)
@@ -27,7 +27,7 @@
 		</div>
 		
 		<!-- Arabic Tv-Shows-->
-		<div class="arabic-tvshow mx-2 md:mx-0">
+		<div class="arabic-tvshow py-24 mx-2 md:mx-0">
 			<h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold"> arabic tv-shows </h2>
 			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 ">
 				@foreach($arabicTv as $tvShow)
