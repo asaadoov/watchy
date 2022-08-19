@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11b5fccd76549e9eea58c211fbaa32a7",
+    "content-hash": "f9725ad8d3ab357a251921f711afa205",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,81 @@
                 "source": "https://github.com/asm89/stack-cors/tree/1.3.0"
             },
             "time": "2019-12-24T22:41:47+00:00"
+        },
+        {
+            "name": "binarytorch/larecipe",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/saleem-hadad/larecipe.git",
+                "reference": "c5bfcc3c2fe9f3ce9c6f67368ee754699363f5ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/saleem-hadad/larecipe/zipball/c5bfcc3c2fe9f3ce9c6f67368ee754699363f5ce",
+                "reference": "c5bfcc3c2fe9f3ce9c6f67368ee754699363f5ce",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown-extra": "^0.8.1|^0.8",
+                "illuminate/support": "^5.4|^6.0|^7.0|^8.0|^9.0",
+                "illuminate/view": "^5.4|^6.0|^7.0|^8.0|^9.0",
+                "php": ">=7.1.3",
+                "symfony/dom-crawler": "^4.1|^5.0|^6.0"
+            },
+            "require-dev": {
+                "laravel/framework": "^5.4|^6.0|^7.0|^8.0|^9.0",
+                "orchestra/testbench": "^3.4|^4.0|^5.0|^7.0",
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BinaryTorch\\LaRecipe\\LaRecipeServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaRecipe": "BinaryTorch\\LaRecipe\\LaRecipe"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Helpers/helpers.php"
+                ],
+                "psr-4": {
+                    "BinaryTorch\\LaRecipe\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saleem Hadad",
+                    "email": "saleem@binary-torch.com"
+                }
+            ],
+            "description": "Generate gorgeous recipes for your Laravel applications using MarkDown",
+            "keywords": [
+                "api",
+                "docs",
+                "documentation",
+                "laravel",
+                "markdown"
+            ],
+            "support": {
+                "issues": "https://github.com/saleem-hadad/larecipe/issues",
+                "source": "https://github.com/saleem-hadad/larecipe"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/larecipe",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2022-03-25T21:59:36+00:00"
         },
         {
             "name": "brick/math",
@@ -424,6 +499,107 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.7.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "reference": "cb17b6477dfff935958ba01325f2e8a2bfa6dab3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/erusev/parsedown/issues",
+                "source": "https://github.com/erusev/parsedown/tree/1.7.x"
+            },
+            "time": "2019-12-30T22:54:17+00:00"
+        },
+        {
+            "name": "erusev/parsedown-extra",
+            "version": "0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown-extra.git",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown-extra/zipball/91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "reference": "91ac3ff98f0cea243bdccc688df43810f044dcef",
+                "shasum": ""
+            },
+            "require": {
+                "erusev/parsedown": "^1.7.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "ParsedownExtra": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "An extension of Parsedown that adds support for Markdown Extra.",
+            "homepage": "https://github.com/erusev/parsedown-extra",
+            "keywords": [
+                "markdown",
+                "markdown extra",
+                "parsedown",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/erusev/parsedown-extra/issues",
+                "source": "https://github.com/erusev/parsedown-extra/tree/0.8.x"
+            },
+            "time": "2019-12-30T23:20:37+00:00"
         },
         {
             "name": "fideloper/proxy",
@@ -2592,6 +2768,338 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "spatie/browsershot",
+            "version": "3.57.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/browsershot.git",
+                "reference": "f430a81b1b8e07f089046984ae0f53c9161b1477"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/browsershot/zipball/f430a81b1b8e07f089046984ae0f53c9161b1477",
+                "reference": "f430a81b1b8e07f089046984ae0f53c9161b1477",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.4|^8.0",
+                "spatie/image": "^1.5.3|^2.0",
+                "spatie/temporary-directory": "^1.1|^2.0",
+                "symfony/process": "^4.2|^5.0|^6.0"
+            },
+            "require-dev": {
+                "pestphp/pest": "^1.20",
+                "spatie/phpunit-snapshot-assertions": "^4.2.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Browsershot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://github.com/freekmurze",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Convert a webpage to an image or pdf using headless Chrome",
+            "homepage": "https://github.com/spatie/browsershot",
+            "keywords": [
+                "chrome",
+                "convert",
+                "headless",
+                "image",
+                "pdf",
+                "puppeteer",
+                "screenshot",
+                "webpage"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/browsershot/tree/3.57.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-08-03T11:26:45+00:00"
+        },
+        {
+            "name": "spatie/crawler",
+            "version": "4.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/crawler.git",
+                "reference": "ed7301f6865c2064854cd429a75fcc31f4a5042d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/crawler/zipball/ed7301f6865c2064854cd429a75fcc31f4a5042d",
+                "reference": "ed7301f6865c2064854cd429a75fcc31f4a5042d",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "guzzlehttp/psr7": "^1.4",
+                "nicmart/tree": "^0.2.7",
+                "php": "^7.1",
+                "spatie/browsershot": "^3.14",
+                "spatie/robots-txt": "^1.0.1",
+                "symfony/dom-crawler": "^4.0 || ^5.0",
+                "tightenco/collect": "^5.6|^6.0|^7.0"
+            },
+            "require-dev": {
+                "larapack/dd": "^1.1",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Crawler\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be"
+                }
+            ],
+            "description": "Crawl all internal links found on a website",
+            "homepage": "https://github.com/spatie/crawler",
+            "keywords": [
+                "crawler",
+                "link",
+                "spatie",
+                "website"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/crawler/issues",
+                "source": "https://github.com/spatie/crawler/tree/master"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/spatie",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2020-05-06T11:35:29+00:00"
+        },
+        {
+            "name": "spatie/image",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/image.git",
+                "reference": "cef42a2d131e28d6f3e0af91c0570f6ba45a8d40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/image/zipball/cef42a2d131e28d6f3e0af91c0570f6ba45a8d40",
+                "reference": "cef42a2d131e28d6f3e0af91c0570f6ba45a8d40",
+                "shasum": ""
+            },
+            "require": {
+                "ext-exif": "*",
+                "ext-mbstring": "*",
+                "league/glide": "^1.4",
+                "php": "^7.2|^8.0",
+                "spatie/image-optimizer": "^1.1",
+                "spatie/temporary-directory": "^1.0.0",
+                "symfony/process": "^3.0|^4.0|^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.0|^9.0",
+                "symfony/var-dumper": "^4.0|^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Image\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Manipulate images with an expressive API",
+            "homepage": "https://github.com/spatie/image",
+            "keywords": [
+                "image",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/image/issues",
+                "source": "https://github.com/spatie/image/tree/1.9.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-11-13T09:39:41+00:00"
+        },
+        {
+            "name": "spatie/image-optimizer",
+            "version": "1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/image-optimizer.git",
+                "reference": "6db75529cbf8fa84117046a9d513f277aead90a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/image-optimizer/zipball/6db75529cbf8fa84117046a9d513f277aead90a0",
+                "reference": "6db75529cbf8fa84117046a9d513f277aead90a0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "php": "^7.3|^8.0",
+                "psr/log": "^1.0 | ^2.0 | ^3.0",
+                "symfony/process": "^4.2|^5.0|^6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.21|^9.4.4",
+                "symfony/var-dumper": "^4.2|^5.0|^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\ImageOptimizer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Easily optimize images using PHP",
+            "homepage": "https://github.com/spatie/image-optimizer",
+            "keywords": [
+                "image-optimizer",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/image-optimizer/issues",
+                "source": "https://github.com/spatie/image-optimizer/tree/1.6.2"
+            },
+            "time": "2021-12-21T10:08:05+00:00"
+        },
+        {
+            "name": "spatie/laravel-export",
+            "version": "0.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-export.git",
+                "reference": "c3156685ad1e142c24ddbb4c7a91f5861e5b60d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-export/zipball/c3156685ad1e142c24ddbb4c7a91f5861e5b60d9",
+                "reference": "c3156685ad1e142c24ddbb4c7a91f5861e5b60d9",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3 || ^7.0",
+                "illuminate/console": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/contracts": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/http": "^6.0 || ^7.0 || ^8.0",
+                "illuminate/support": "^6.0 || ^7.0 || ^8.0",
+                "nyholm/psr7": "^1.1",
+                "php": "^7.2",
+                "psr/http-message": "^1.0",
+                "spatie/crawler": "^4.3",
+                "symfony/console": "^4.2 || ^5.0",
+                "symfony/http-foundation": "^4.2 || ^5.0",
+                "symfony/process": "^4.2 || ^5.0",
+                "symfony/psr-http-message-bridge": "^1.2"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^4.0 || ^5.0 || ^6.0",
+                "phpunit/phpunit": "^8.0 || ^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Export\\ExportServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Export\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create a static site bundle from a Laravel app",
+            "homepage": "https://github.com/spatie/laravel-export",
+            "keywords": [
+                "laravel-export",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-export/issues",
+                "source": "https://github.com/spatie/laravel-export/tree/0.3.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-02T15:26:12+00:00"
         },
         {
             "name": "spatie/laravel-view-models",
@@ -7656,5 +8164,5 @@
         "php": "^7.2.5"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
