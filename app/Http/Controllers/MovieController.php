@@ -16,7 +16,7 @@ class MovieController extends Controller
 		$nowPlayingMovies = Http::get('https://api.themoviedb.org/3/movie/now_playing?api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
-		$arabicMovies = Http::get('https://api.themoviedb.org/3/discover/movie?language=ar&primary_release_date.gte=2000&with_original_language=ar&api_key='.config('services.tmdb.token'))
+		$arabicMovies = Http::get('https://api.themoviedb.org/3/discover/movie?language=ar&with_original_language=ar&api_key='.config('services.tmdb.token'))
 			->json()['results'];
 		
 		// $arabicMovies2 = Http:: 	->get('https://api.themoviedb.org/3/discover/movie?language=ar&sort_by=primary_release_date.desc&page=2&primary_release_date.gte=2014&vote_average.gte=7.5&with_original_language=ar')
