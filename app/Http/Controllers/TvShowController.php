@@ -25,9 +25,6 @@ class TvShowController extends Controller
 		$genres = Http::get('https://api.themoviedb.org/3/genre/tv/list?api_key='.config('services.tmdb.token'))
 			->json()['genres'];
 
-
-		// dd($genres);
-
 		$viewModel = new TvShowsViewModel($popularTv, $topRatedTv, $arabicTv, $genres);
 
 		return view('tvShow.index', $viewModel);
