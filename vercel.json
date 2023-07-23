@@ -16,14 +16,12 @@
   ],
   "env": {
       "APP_NAME":"249watchy",
-      "APP_KEY": "base64:JhHoJ0cL5kWzuD9YpJASSeEfxjO4G/RDdDlMfp04aVI=",
       "APP_CONFIG_CACHE": "/tmp/config.php",
       "APP_EVENTS_CACHE": "/tmp/events.php",
       "APP_PACKAGES_CACHE": "/tmp/packages.php",
       "APP_ROUTES_CACHE": "/tmp/routes.php",
       "APP_SERVICES_CACHE": "/tmp/services.php",
       "VIEW_COMPILED_PATH": "/tmp",
-      "TMDB_TOKEN":"f405a739a5d10f537659a7a2f6bd2bee",
 
       "CACHE_DRIVER": "array",
       "LOG_CHANNEL": "stderr",
