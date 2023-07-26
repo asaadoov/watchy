@@ -29,7 +29,6 @@ class MovieController extends Controller
 
 			
 		$viewModel = new MoviesViewModel($popularMovies, $nowPlayingMovies, $arabicMovies, $genres);
-		dd("test");
 		return view('movie.index', $viewModel);
 		
 		// return view('movie.index', compact(['popularMovies', 'genres', 'nowPlayingMovies', 'arabicMovies']));
