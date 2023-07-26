@@ -36,8 +36,6 @@ class MovieController extends Controller
 	}
 
 	public function show($id){
-		dd($id);
-
 		$movie = Http::get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images&api_key='.config('services.tmdb.token'))
 			->json();
 		$similarMovies = Http::get('https://api.themoviedb.org/3/movie/'.$id.'/similar?api_key='.config('services.tmdb.token'))

@@ -37,5 +37,6 @@
 				@endforeach
 			</div>
 		</div>
+		{{ dd($popularMovies) }}
 	</div>
 @endsection
