@@ -5,8 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 
-
-class SearchDropdown extends Component
+class Search extends Component
 {
     public $search = '';
 
@@ -61,6 +60,6 @@ class SearchDropdown extends Component
 
                 ]);
             });
-        return view('livewire.search-dropdown', compact(['searchResult']));
+        return view('livewire.search', compact(['searchResult']));
     }
 }

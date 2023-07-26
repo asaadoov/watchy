@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 			<div class="flex items-center">
-				<livewire:search-dropdown>
+				<livewire:search>
 			</div>
 		</div>
 	</nav>
