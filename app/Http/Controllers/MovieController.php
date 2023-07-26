@@ -29,13 +29,14 @@ class MovieController extends Controller
 
 			
 		$viewModel = new MoviesViewModel($popularMovies, $nowPlayingMovies, $arabicMovies, $genres);
-		
+
 		return view('movie.index', $viewModel);
 		
 		// return view('movie.index', compact(['popularMovies', 'genres', 'nowPlayingMovies', 'arabicMovies']));
 	}
 
 	public function show($id){
+		dd($id);
 
 		$movie = Http::get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images&api_key='.config('services.tmdb.token'))
 			->json();

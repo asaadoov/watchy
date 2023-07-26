@@ -1,8 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{ dd($movie) }}
-
 	<div class="movie-info border-b border-gray-800">
 		<div class="container mx-auto px-4 py-16 flex items-center flex-col md:flex-row">
 			<div class="flex-none">
