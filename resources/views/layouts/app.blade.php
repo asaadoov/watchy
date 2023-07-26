@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 			<div class="flex items-center">
-				<livewire:search />
+				{{-- <livewire:search /> --}}
 			</div>
 		</div>
 	</nav>
