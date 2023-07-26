@@ -2,7 +2,6 @@
 
 @section('content')
 	<div class="container mx-auto px-4 pt-16">	
-		{{ dd($popularMovies) }}
 		<!-- Popular -->
 		<div class="popular-movies mx-2 md:mx-0">
 			<h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold"> popular movies </h2>
