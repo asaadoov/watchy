@@ -27,9 +27,9 @@ class MovieController extends Controller
 			->json()['genres'];
 
 
-		dd($arabicMovies);
-
+			
 		$viewModel = new MoviesViewModel($popularMovies, $nowPlayingMovies, $arabicMovies, $genres);
+		dd($viewModel);
 
 		return view('movie.index', $viewModel);
 		
