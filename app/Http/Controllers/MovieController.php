@@ -10,6 +10,7 @@ use App\ViewModels\MovieViewModel;
 class MovieController extends Controller
 {
 	public function index(){
+		dd("test");
 		
 		$popularMovies = Http::get('https://api.themoviedb.org/3/movie/popular?api_key='.config('services.tmdb.token'))->json()['results'];
 		// dd($popularMovies);

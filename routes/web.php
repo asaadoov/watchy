@@ -3,8 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::any('/', function () {
-	return "test";
-  // return redirect('/movie');
+  return redirect('/movie');
 });
 
 Route::prefix('/movie')->group(function() {
