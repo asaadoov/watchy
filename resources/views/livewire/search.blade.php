@@ -6,7 +6,7 @@
         type="text" 
         wire:model.debounce.500ms="search" 
         class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-2 focus:outline-none focus:shadow-outline text-sm	" 
-        placeholder='Search (Press "/" to focus)'
+        placeholder='Search (Click "/" to focus)'
         x-ref="search"
         @keydown.window="
             if(event.keyCode == 191){
