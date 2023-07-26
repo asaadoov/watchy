@@ -15,9 +15,7 @@ class SearchDropdown extends Component
         $searchResult= [];
 
         if(strlen($this->search) >= 2){
-            $searchResult = Http::withToken(config('services.tmdb.token'))
-            ->get('https://api.themoviedb.org/3/search/multi?query='.urlencode( $this->search ))
-            ->json()['results'];
+            $searchResult = Http::get('https://api.themoviedb.org/3/search/multi?api_key='.config('services.tmdb.token').'&query='.urlencode( $this->search ))->json()['results'];
         }
         
         $searchResult= collect($searchResult)
