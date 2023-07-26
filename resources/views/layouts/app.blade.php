@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="icon" href="https://ui-avatars.com/api?size=235&name=watchy">
-	<livewire:styles>
+	@livewireStyles
 	<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 	<script type="text/javascript" src="http://www.youtube.com/player_api"></script>
 
@@ -32,7 +32,7 @@
 				</li>
 			</ul>
 			<div class="flex items-center">
-				<livewire:search>
+				<livewire:search />
 			</div>
 		</div>
 	</nav>
@@ -41,7 +41,7 @@
 	<footer>
 		<div style="text-align:center; margin: 2rem;">developed by Asaad Balla  &hearts; </div>
 	</footer>
-	<livewire:scripts>
+	@livewireScripts
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 	@stack('js')
 </body>

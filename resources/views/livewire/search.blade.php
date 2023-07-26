@@ -26,7 +26,6 @@
 
     <div wire:loading class="spinner top-0 right-0 mr-4 mt-5"></div>
 
-
     @if(strlen($search) >= 2 )
         <div 
             class="z-50 absolute bg-gray-800 text-sm rounded w-64 mt-4" 
