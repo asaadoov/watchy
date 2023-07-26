@@ -6,6 +6,10 @@
   ],
   "routes": [
       {
+          "src": "/vendor/(binarytorch|livewire)/(css|js|images)/(.*)",
+          "dest": "public/vendor/$1/$2/$3"
+      },
+      {
           "src": "/(css|js|images)/(.*)",
           "dest": "public/$1/$2"
       },
