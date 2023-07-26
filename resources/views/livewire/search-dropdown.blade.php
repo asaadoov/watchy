@@ -27,34 +27,5 @@
     <div wire:loading class="spinner top-0 right-0 mr-4 mt-5"></div>
 
 
-    @if(strlen($search) >= 2 )
-        <div 
-            class="z-50 absolute bg-gray-800 text-sm rounded w-64 mt-4" 
-            x-show.transition.opacity="isOpen"
-        >
-            {{-- @if($searchResult->count() > 0)
-                <ul>
-                    @foreach ($searchResult as $movie)
-                        <li class="border-b border-gray-700">
-                            <a 
-                                href="{{ $movie['linkToPage'] }}" 
-                                class="block hover:bg-gray-700 px-3 py-3 flex items-center"
-                                @if($loop->last) @keydown.tab.exact="isOpen=false" @endif>
-                            
-                                @if($movie['poster_path'])
-                                    <img src="{{$movie['poster_path']}}" alt="{{$movie['title']}}" class="w-8">
-                                @else
-                                    <img src="{{ asset('img/50x75.png') }}" alt="poster" class="w-8">
-                                @endif
-                                
-                                <span class="ml-4">{{$movie['title']}}</span>
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
-            @else
-                <div class="px-3 py-3">No results for "{{ $search }}"</div>
-            @endif --}}
-        </div>
-    @endif
+    
 </div>
