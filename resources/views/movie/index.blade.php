@@ -13,7 +13,7 @@
 			</div>
 		</div>
 
-		{{-- <!-- Now Playing -->
+		<!-- Now Playing -->
 		<div class="playing-movies py-24 mx-2 md:mx-0">
 			<h2 class="uppercase tracking-wider text-orange-500 text-lg font-semibold"> Now Playing </h2>
 
@@ -36,6 +36,6 @@
 					@endif
 				@endforeach
 			</div>
-		</div> --}}
+		</div>
 	</div>
 @endsection
