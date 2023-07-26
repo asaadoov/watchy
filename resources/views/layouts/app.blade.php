@@ -31,6 +31,9 @@
 					<a href="{{ route('actor') }}" class="hover:text-gray-300">Actors</a>
 				</li>
 			</ul>
+			<div class="flex items-center">
+				<livewire:search-dropdown>
+			</div>
 		</div>
 	</nav>
 
