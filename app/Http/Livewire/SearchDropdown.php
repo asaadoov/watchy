@@ -61,7 +61,6 @@ class SearchDropdown extends Component
 
                 ]);
             });
-        dd("test");
         return view('livewire.search-dropdown', compact(['searchResult']));
     }
 }

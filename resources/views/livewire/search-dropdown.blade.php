@@ -32,7 +32,7 @@
             class="z-50 absolute bg-gray-800 text-sm rounded w-64 mt-4" 
             x-show.transition.opacity="isOpen"
         >
-            @if($searchResult->count() > 0)
+            {{-- @if($searchResult->count() > 0)
                 <ul>
                     @foreach ($searchResult as $movie)
                         <li class="border-b border-gray-700">
@@ -54,7 +54,7 @@
                 </ul>
             @else
                 <div class="px-3 py-3">No results for "{{ $search }}"</div>
-            @endif
+            @endif --}}
         </div>
     @endif
 </div>
